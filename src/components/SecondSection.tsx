@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 
 const statistics = [
@@ -50,20 +49,18 @@ export default function SecondSection() {
             </div>
 
            <div className="relative hidden md:block md:w-[70%] -right-20 aspect-square mx-auto">
-                <Image
-                  src="/Image.png"
-                  alt="Background Image"
-                  fill
-                  className="object-cover z-0"
+                <img
+                    src="/Image.png"
+                    alt="Background Image"
+                    className="absolute inset-0 w-full h-full object-cover z-0"
                 />
 
                 <div className="absolute inset-0 flex items-center justify-center z-10">
-                  <Image
+                    <img
                     src="/logo.png"
                     alt="Logo Image"
-                    fill
                     className="w-[50%] sm:w-[40%] md:w-[50%] absolute -mt-10 left-[51%] -translate-x-1/4 h-auto"
-                  />
+                    />
                 </div>
             </div>
 
