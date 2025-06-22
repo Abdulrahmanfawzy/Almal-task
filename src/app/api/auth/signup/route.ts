@@ -5,7 +5,6 @@ import jwt from 'jsonwebtoken';
 
 export async function POST(req: Request) {
   const { name, email, password } = await req.json();
-  console.log( name, email, password);
   
   if (!email || !password) {
     return NextResponse.json({ error: 'Email and password are required' }, { status: 400 });
@@ -21,7 +20,9 @@ export async function POST(req: Request) {
 
   const hashedPassword = await bcrypt.hash(password, 10);
   const newUser = await db.collection('users').insertOne({ name, email, password: hashedPassword, favorites: [] });
+  const user = await db.collection('users').findOne({ _id: newUser.insertedId });
 
+  
   const token = jwt.sign(
     { userId: newUser.insertedId, email },
     process.env.JWT_SECRET!,
@@ -29,7 +30,7 @@ export async function POST(req: Request) {
   );
 
   // 🔐 Set Cookie
-  const response = NextResponse.json({ message: 'User created successfully', user:newUser });
+  const response = NextResponse.json({ message: 'User created successfully', user:user });
 
   response.cookies.set('token', token, {
     httpOnly: true,

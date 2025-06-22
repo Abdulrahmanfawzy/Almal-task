@@ -27,6 +27,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const dispatch = useDispatch();
   const user = useSelector((state: RootState) => state.user.user);
+  console.log(user);
   
   const getLinkClass = (href: string) => {
     return pathname === href ? 'text-[#373737]' : 'text-[#9A9A9A]';
@@ -83,7 +84,7 @@ export default function Navbar() {
                   key="user-name"
                   className="text-blue-600 font-semibold text-md bg-blue-100 px-3 py-1 rounded"
                 >
-                  👋 {user.name.split(" ")[0]}
+                  👋 {user?.name?.split(" ")[0]}
                 </span>
                 <Link href='favorites'
                   className="font-semibold text-md"
