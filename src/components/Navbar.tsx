@@ -41,6 +41,7 @@ export default function Navbar() {
           dispatch(setUser(data.user));
         }
       } catch (err) {
+        console.log(err);
         console.error('Error fetching user');
       }
     };

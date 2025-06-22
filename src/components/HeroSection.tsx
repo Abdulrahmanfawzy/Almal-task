@@ -1,3 +1,4 @@
+import Image from "next/image";
 import EmailSignup from "./EmailSignup";
 import { ChevronDown } from "lucide-react";
 
@@ -24,7 +25,7 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <img
+            {/* <img
                 src="/Ellipse 1575.png"
                 alt="Hero Image"
                 className="w-[300px] sm:w-[400px] md:w-[500px] top-0 -left-20 h-auto absolute z-0"
@@ -34,7 +35,25 @@ export default function HeroSection() {
                 src="/Ellipse 1575.png"
                 alt="Hero Image"
                 className="w-[500px] sm:w-[600px] md:w-[800px] top-0 left-1/2 -translate-x-1/2 h-auto absolute z-[-1]"
-            />
+            /> */}
+
+            <Image
+                src="/Ellipse 1575.png"
+                alt="Hero Image"
+                width={500} // اختار أكبر عرض ممكن لتتناسب مع responsive
+                height={500} // مش مهم الطول بدقة لو عندك h-auto بس لازم يتحط قيمة
+                className="w-[300px] sm:w-[400px] md:w-[500px] top-0 -left-20 h-auto absolute z-0"
+                />
+
+                <Image
+                src="/Ellipse 1575.png"
+                alt="Hero Image"
+                width={800}
+                height={800}
+                className="w-[500px] sm:w-[600px] md:w-[800px] top-0 left-1/2 -translate-x-1/2 h-auto absolute z-[-1]"
+                />
+
+
         </section>
 
         <div className="relative -mt-100 md:-mt-40 bg-[url('/wave.svg')] bg-no-repeat bg-top bg-cover" >

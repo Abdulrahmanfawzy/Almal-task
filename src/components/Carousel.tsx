@@ -33,7 +33,7 @@ export default function Carousel() {
                     height={400} 
                     className="w-full h-[300px] md:h-[400px] object-cover rounded-lg"
                   />
-                  <h2 className="text-2xl font-semibold my-3">You're invited to SIGNAL 2021</h2>
+                  <h2 className="text-2xl font-semibold my-3">You are invited to SIGNAL 2021</h2>
                   <p className="text-gray-500">
                     Join us for the digital engagement event of the year bringing together 49,000+ developers, product leaders and visionaries to talk about the future of customer engagement.
                   </p>
@@ -46,7 +46,7 @@ export default function Carousel() {
                     height={400} 
                     className="w-full h-[300px] md:h-[400px] object-cover rounded-lg"
                   />
-                  <h2 className="text-2xl font-semibold my-3">You're invited to SIGNAL 2021</h2>
+                  <h2 className="text-2xl font-semibold my-3">You are invited to SIGNAL 2021</h2>
                   <p className="text-gray-500">
                     Join us for the digital engagement event of the year bringing together 50,000+ developers, product leaders and visionaries to talk about the future of customer engagement.
                   </p>
