@@ -7,8 +7,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@/store/store';
+import { useDispatch } from 'react-redux';
 import { setUser } from '@/store/userSlice';
 
 const SignupSchema = Yup.object().shape({
@@ -53,6 +52,7 @@ export default function SigninPage() {
                 router.push('/');
               }
             } catch (err) {
+              console.log(err);
               toast.error('Something went wrong');
             } finally {
               setSubmitting(false);
@@ -90,7 +90,7 @@ export default function SigninPage() {
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">
                 {isSubmitting ? 'Signing in...' : 'Sign In'}
               </button>
-              <p>Don't have an account ? <Link className='text-blue-500' href='/signup'>Sign up</Link></p>
+              <p>Dont have an account ? <Link className='text-blue-500' href='/signup'>Sign up</Link></p>
             </Form>
           )}
         </Formik>

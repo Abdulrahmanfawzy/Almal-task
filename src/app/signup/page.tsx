@@ -53,6 +53,7 @@ export default function SignupPage() {
                 router.push('/');
               }
             } catch (err) {
+              console.log(err);
               toast.error('Something went wrong');
             } finally {
               setSubmitting(false);

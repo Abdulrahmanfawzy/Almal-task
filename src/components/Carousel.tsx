@@ -5,6 +5,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 const images = ["/person.png", "/person.png", "/person.png"];
 
@@ -25,9 +26,11 @@ export default function Carousel() {
             <SwiperSlide key={index}>
               <div className="flex flex-col md:flex-row justify-between gap-6 mb-10">
                 <div className="w-full md:w-1/2">
-                  <img
+                  <Image
                     src="/person.png"
                     alt="person image"
+                    width={800} 
+                    height={400} 
                     className="w-full h-[300px] md:h-[400px] object-cover rounded-lg"
                   />
                   <h2 className="text-2xl font-semibold my-3">You're invited to SIGNAL 2021</h2>
@@ -36,9 +39,11 @@ export default function Carousel() {
                   </p>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <img
+                  <Image
                     src="/person.png"
                     alt="person image"
+                    width={800} 
+                    height={400} 
                     className="w-full h-[300px] md:h-[400px] object-cover rounded-lg"
                   />
                   <h2 className="text-2xl font-semibold my-3">You're invited to SIGNAL 2021</h2>
@@ -54,7 +59,6 @@ export default function Carousel() {
           <div className="swiper-button-prev custom-nav" />
           <div className="swiper-button-next custom-nav" />
 
-          {/* استايل خاص للأسهم والنقاط */}
           <style jsx>{`
             .custom-nav {
               position: absolute;

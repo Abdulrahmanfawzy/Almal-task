@@ -12,7 +12,6 @@ import {
   Droplets,
   Heart,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useWeather } from "@/hooks/useWeather";
 import { format } from "date-fns";
@@ -97,10 +96,10 @@ export default function Weather() {
         toast.error(result.error || "Something went wrong");
       }
     } catch (error) {
+      console.log(error);
       toast.error("You're not logged in!");
     }
   };
-
 
 
   const {

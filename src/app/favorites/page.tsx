@@ -17,6 +17,7 @@ export default function FavoriteList() {
       toast.success(`${city} removed from favorites`);
       queryClient.invalidateQueries({ queryKey: ["favorites"] });
     } catch (err) {
+      console.log(err);
       toast.error("Failed to remove city");
     }
   };

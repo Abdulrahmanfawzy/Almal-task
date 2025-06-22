@@ -1,11 +1,4 @@
 
-
-const statistics = [
-  { num: "23+", data: "Years of experience" },
-  { num: "50+", data: "Fantasy world" },
-  { num: "864+", data: "Customers feel happy" }
-];
-
 export default function ThirdSection() {
   return (
     <div className="flex justify-between flex-wrap w-[90%] mx-auto items-center">

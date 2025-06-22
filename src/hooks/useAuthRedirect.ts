@@ -21,6 +21,7 @@ export const useAuthRedirect = (redirectTo: string = "/") => {
           router.replace(redirectTo);
         }
       } catch (err) {
+        console.log(err);
         router.replace(redirectTo);
       }
     };
