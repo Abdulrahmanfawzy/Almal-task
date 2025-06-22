@@ -1,3 +1,85 @@
+
+A full-stack weather application built using Next.js App Router, with features like:
+
+🌍 Real-time weather data
+
+❤️ Add/remove favorite cities
+
+🔐 JWT authentication with HttpOnly cookies
+
+☁️ Dynamic icons and summaries
+
+☀️ Sunrise/sunset info
+
+🧠 Protected routes and persistent user sessions
+
+
+Features
+✅ Authentication
+Built with JWT + HttpOnly Cookies
+
+Secure login and signup using bcrypt and custom API routes
+
+token is stored in cookies, decoded server-side using jsonwebtoken
+
+🏙️ Weather Data
+Fetched using OpenWeatherMap API
+
+Dynamic based on:
+
+Default location (Cairo)
+
+Searched city (Enter key)
+
+Auto-detect location via browser geolocation
+
+Temperature toggle (°C / °F)
+
+Shows:
+
+Current temp, feels like, high, low
+
+Wind speed, humidity, condition
+
+Sunrise and sunset time
+
+❤️ Favorites
+Protected API route to add/remove cities from user’s favorites
+
+Stored inside MongoDB Atlas inside users collection
+
+List rendered on /favorites page (protected)
+
+Add/remove city with one click using a ❤️ icon
+
+
+src/
+├── app/
+│   ├── favorites/               ← Favorites page (protected)
+│   ├── api/
+│   │   ├── auth/                ← login, register, me
+│   │   └── favorites/           ← add/remove/get
+├── components/
+│   ├── WeatherCard.tsx         ← Weather UI component
+│   ├── FavoritesList.tsx       ← Display user favorites
+├── hooks/
+│   ├── useWeather.ts           ← Weather API logic
+│   └── useAuthGuard.ts         ← Protect routes
+├── lib/
+│   └── mongodb.ts              ← MongoDB connection
+├── models/
+│   └── User.ts                 ← Mongoose User schema
+
+#Home
+![App Screenshot](./public/one.png)
+
+#Home
+![App Screenshot](./public/two.png)
+
+#weather
+![App Screenshot](./public/weather.png)
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
