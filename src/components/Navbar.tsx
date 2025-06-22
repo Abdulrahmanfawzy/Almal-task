@@ -11,10 +11,10 @@ import { clearUser, setUser } from "@/store/userSlice";
 const centerLinks = [
   { label: "Home", href: "/" },
   { label: "Weather", href: "/weather" },
-  { label: "Events", href: "/events" },
-  { label: "About us", href: "/about" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Contact us", href: "/contact" },
+  { label: "Events", href: "#" },
+  { label: "About us", href: "#" },
+  { label: "Gallery", href: "#" },
+  { label: "Contact us", href: "#" },
 ];
 
 const authLinks = [
